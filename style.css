@@ -1,0 +1,46 @@
+.icon-bold {
+    text-shadow: 0 0 1.2px currentColor;
+}
+
+.myfont {
+    font-family: "Plaster", system-ui;
+    font-weight: 400;
+    font-style: normal;
+}
+
+html {
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+
+}
+
+.active {
+    color: #0dcaf0 !important;
+}
+
+.highlight {
+    background-color: yellow;
+    font-weight: bold;
+    padding: 0 2px;
+}
+
+
+@media (max-width: 450px) {
+    .cstmW {
+        width: 80% !important;
+    }
+
+    .cstmW2 {
+        width: 100% !important;
+    }
+
+    .map-container {
+        width: 100%;
+    }
+}
+
+@media (max-width: 850px) {
+    .cstmW3 {
+        width: 100% !important;
+    }
+}

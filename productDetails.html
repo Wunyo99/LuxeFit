@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bungee&family=Karla:ital,wght@0,200..800;1,200..800&family=Lora:ital,wght@0,400..700;1,400..700&family=Plaster&family=Quattrocento:wght@400;700&family=Roboto+Slab:wght@100..900&family=Rubik+Storm&display=swap"
+        rel="stylesheet">
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <link rel="icon" href="./images/favicon.png">
+    <title>LuxeFit</title>
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg bg-body-tertiary px-3 fixed-top bg-white shadow-sm ">
+        <div class="container-fluid">
+            <a class="navbar-brand fw-medium myfont fs-2" href="#">Luxe<span class="text-info">Fit</span>.</a>
+
+            <button style="width: 40px; height: 40px; border-radius: 50px"
+                class="btn bg-info text-info text-center bg-opacity-25 p-1 d-lg-none ms-md-5 position-relative "
+                type="button" data-bs-toggle="offcanvas" data-bs-target="#shoppingCart"
+                aria-controls="offcanvasExample">
+                <i class="bi bi-cart2 fs-5"></i>
+                <span class="cart-count position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger"
+                    id="cartMiniCount">
+                    0
+                </span>
+            </button>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link fw-medium" aria-current="page" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link fw-medium" href="shop.html">Shop</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link fw-medium" href="blog.html">Blog</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link fw-medium" href="about.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link fw-medium" href="contact.html">Contact</a>
+                    </li>
+                </ul>
+
+            </div>
+            <button style="width: 40px; height: 40px; border-radius: 50px"
+                class="btn bg-info text-info text-center bg-opacity-25 p-1 d-none d-lg-block ms-2 position-relative"
+                type="button" data-bs-toggle="offcanvas" data-bs-target="#shoppingCart"
+                aria-controls="offcanvasExample">
+                <i class="bi bi-cart2 fs-5 icon-bold"></i>
+                <span class="cart-count position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger"
+                    id="cartMiniCount"></span>
+            </button>
+        </div>
+    </nav>
+
+    <div id="productDetails" class="container mt-5 py-5"></div>
+
+    <div class="container-fluid mt-5 px-3">
+        <h1 class="fw-bold text-center ">You May Also Like</h1>
+        <div id="featuredProducts" class="row g-3 mt-3 py-3">
+        </div>
+    </div>
+    <div id="footer"></div>
+
+    <div class="offcanvas cart offcanvas-end" tabindex="-1" id="shoppingCart" aria-labelledby="offcanvasExampleLabel">
+        <div class="offcanvas-header">
+            <a class="navbar-brand fw-medium myfont fs-2" href="#">Luxe<span class="text-info">Fit</span>.</a>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body d-flex flex-column">
+            <div class="d-flex gap-2 align-items-center">
+                <h5>Shopping Cart</h5>
+                <span class="cart-count d-flex align-items-center badge rounded-pill bg-danger" id="cartMiniCoun">
+                    0
+                </span>
+            </div>
+            <ul id="cartItems" class="list-groups"></ul>
+            <div class="mt-auto " id="cartFooter">
+                <div class="d-flex justify-content-between align-items-center fw-bolder">
+                    <span class="mt-2">Total:</span>
+                    <span class="text-success fs-4 me-3" id="cartTotal"></span>
+                </div>
+                <button class="btn btn-info text-white fw-medium w-100 mt-2" id="checkOut">Checkout</button>
+                <button class="btn btn-secondary  fw-medium w-100 mt-3" id="clearCart">Clear cart</button>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="./products.js"></script>
+    <script src="./script.js"></script>
+    <script src="./shop.js"></script>
+    <script>
+        loadComponent("footer", "footer.html");
+
+        const params = new URLSearchParams(window.location.search);
+        const productId = params.get("id");
+        const product = allProducts.find(p => p.id == productId);
+        const productDetails = document.getElementById("productDetails");
+        const featuredContainer = document.getElementById("featuredProducts");
+
+
+        if (product) {
+            productDetails.innerHTML = `
+            
+            <div class="row g-3 mt-lg-4">
+            <div class="col-md-6">
+                <img src="${product.img}" class="img-fluid w-75 cstmW2">
+            </div>
+            <div class="col-md-6">
+                <h4>${product.name}</h4>
+                <p class = "fw-medium text-secondary">${product.brand}</p>
+                <p class = "fw-bold text-success fs-1">${formatPrice(product.price)}</p>
+            <select class="form-select cstmW w-50" name="" id="">
+                <option selected>Select your size</option>
+                <option value="">S</option>
+                <option value="">M</option>
+                <option value="">L</option>
+                <option value="">XL</option>
+                <option value="">2XL</option>
+                <option value="">3XL</option>
+                <option value="">4XL</option>
+                <option value="">5XL</option>
+                <option value="">6XL</option>
+            </select>
+                <h5 class = "mt-4">Product details</h5>
+                <p class = "mt-3">${product.description}</p>
+                <button class="btn btn-info text-white fw-medium" id = "addToCartBtn"><i class="bi bi-cart2 icon-bold"></i> Add to Cart</button>
+            </div>
+        </div>
+            `;
+            document.getElementById("addToCartBtn").addEventListener("click", () => {
+                addToCart(product);
+                saveCart();
+                renderCart();
+            });
+
+            if (featuredContainer) {
+                featuredContainer.innerHTML = "";
+
+                const featured = allProducts
+                    .filter(p => p.id != product.id && p.brand === product.brand)
+                    .slice(0, 4);
+
+                const toShow = featured.length > 0
+                    ? featured : allProducts
+                        .filter(p => p.id != product.id).sort(() => 0.5 - Math.random()).slice(0, 4);
+
+
+                toShow.forEach(p => {
+                    featuredContainer.innerHTML += `
+                        <div class="col-12 col-md-6 col-lg-3">
+                        <div class="card rounded-4 mx-auto position-relative">
+                        <img src="${p.img}"class="card-img-top p-3 rounded-5 "  style ="height: 20rem">
+                        <div class="card-body">
+                        <span class="text-muted fw-medium">${p.brand}</span> 
+                        <span class="text-muted fw-medium"> • ${p.gender}</span>
+                        <h6 class="fw-bold">${p.name}</h6>
+                        <div class="d-flex gap-2">
+                            <div class="text-warning fs-5">
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                            </div>
+                        </div>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <span class="fw-bolder">${formatPrice(p.price)}</span>
+                            <div>
+                                <a href = "productDetails.html?id=${p.id}"><button class = "btn btn-info p-1 text-white fw-medium">View Details</button></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        `;
+                });
+            }
+
+        } else {
+            container.innerHTML = `<p>Product not found!</p>`;
+        }
+
+
+
+        loadCart();
+        renderCart();
+    </script>
+</body>
+
+</html>

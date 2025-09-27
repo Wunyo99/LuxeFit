@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bungee&family=Karla:ital,wght@0,200..800;1,200..800&family=Lora:ital,wght@0,400..700;1,400..700&family=Plaster&family=Quattrocento:wght@400;700&family=Roboto+Slab:wght@100..900&family=Rubik+Storm&display=swap"
+        rel="stylesheet">
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <link rel="icon" href="./images/favicon.png">
+    <title>LuxeFit</title>
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg bg-body-tertiary px-3 fixed-top bg-white shadow-sm ">
+        <div class="container-fluid">
+            <a class="navbar-brand fw-medium myfont fs-2" href="#">Luxe<span class="text-info">Fit</span>.</a>
+
+            <button style="width: 40px; height: 40px; border-radius: 50px"
+                class="btn bg-info text-info text-center bg-opacity-25 p-1 d-lg-none ms-md-5 position-relative "
+                type="button" data-bs-toggle="offcanvas" data-bs-target="#shoppingCart"
+                aria-controls="offcanvasExample">
+                <i class="bi bi-cart2 fs-5"></i>
+                <span class="cart-count position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger"
+                    id="cartMiniCount">
+                    0
+                </span>
+            </button>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link fw-medium" aria-current="page" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active fw-medium" href="shop.html">Shop</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link fw-medium" href="about.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link fw-medium" href="contact.html">Contact</a>
+                    </li>
+                </ul>
+
+            </div>
+            <button style="width: 40px; height: 40px; border-radius: 50px"
+                class="btn bg-info text-info text-center bg-opacity-25 p-1 d-none d-lg-block ms-2 position-relative"
+                type="button" data-bs-toggle="offcanvas" data-bs-target="#shoppingCart"
+                aria-controls="offcanvasExample">
+                <i class="bi bi-cart2 fs-5 icon-bold"></i>
+                <span class="cart-count position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger"
+                    id="cartMiniCount"></span>
+            </button>
+        </div>
+    </nav>
+    <section style="background: linear-gradient(to top, rgba(0, 0, 0, 0.6)0%, rgba(0, 0, 0, 0.6)50%), url('https://t4.ftcdn.net/jpg/06/71/12/43/240_F_671124391_7Xxxec8n4pGYfY6uQF5WAAoEAtFXcW3A.jpg');
+    background-repeat: no-repeat;background-position: center; background-size: cover; height: fit-content;">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 " style="margin-top: 6rem;">
+                    <h1 class="text-white display-2 fw-bold text-center m-auto">
+                        Welcome to <span class="text-info">Our Shop</span>
+                    </h1>
+                    <p class="text-white w-75 text-center m-auto py-4 mb-5"> Discover a collection of handpicked
+                        products designed to bring style, comfort, and value to your everyday life.
+                        Whether you’re looking for the latest trends, timeless essentials, or unique finds, we’ve got
+                        something special for you.
+                    </p>
+                    <p class="fw-medium">
+
+                    </p>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+
+    <section>
+        <div class="container d-flex flex-column flex-md-row justify-content-between py-5">
+            <div class="input-group w-50 cstmW m-auto m-md-0">
+                <input type="search" class="form-control" id="search" placeholder="Find your style...">
+                <span class="input-group-text"><i class="bi bi-search"></i></span>
+            </div>
+
+            <div class="d-flex gap-3 mt-5 mt-md-0">
+                <button class="btn btn-primary d-flex gap-2 py-2 px-4" data-bs-toggle="offcanvas"
+                    data-bs-target="#filterCanvas">
+                    <i class="bi bi-funnel icon-bold"></i>
+                    <span>Filter</span>
+                </button>
+                <select id="sortSelect" class="form-select" aria-label="Default select example">
+                    <option selected>Sort by...</option>
+                    <option value="max">Max price</option>
+                    <option value="min">Min price</option>
+                </select>
+            </div>
+        </div>
+    </section>
+
+
+    <section>
+        <div class="container-fluid mt-2 py-4">
+            <div class="row px-3 g-3 " id="shopProducts"></div>
+        </div>
+    </section>
+
+    <nav>
+        <ul id="pagination" class="pagination justify-content-center mt-4"></ul>
+    </nav>
+
+
+    <section>
+        <div class="offcanvas offcanvas-end" tabindex="-1" id="filterCanvas" aria-labelledby="offcanvasExampleLabel">
+            <div class="offcanvas-header">
+                <h5 class="offcanvas-title" id="offcanvasExampleLabel">Filters</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+                <div>
+                    <h5>Gender</h5>
+                    <div class="d-flex flex-column mt-3 gap-4">
+                        <div class="d-flex align-items-center gap-2">
+                            <input type="checkbox" class="filter-checkbox form-check-input  p-3" value="men">
+                            <label class="fw-medium"> Men</label>
+                        </div>
+                        <div class="d-flex align-items-center gap-2">
+                            <input type="checkbox" class="filter-checkbox form-check-input  p-3" value="women">
+                            <label class="fw-medium"> Women</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="mt-5">
+                    <h5>Category</h5>
+                    <div>
+                        <div class="row g-3 mt-2">
+                            <div class="col-4 d-flex align-items-center gap-2">
+                                <input type="checkbox" class="filter-checkbox form-check-input  p-3" value="shirt">
+                                <label class="fw-medium"> Shirts</label>
+                            </div>
+                            <div class="col-4 d-flex align-items-center gap-2">
+                                <input type="checkbox" class="filter-checkbox form-check-input  p-3" value="t-shirt">
+                                <label class="fw-medium"> T-shirts</label>
+                            </div>
+                            <div class="col-4 d-flex align-items-center gap-2">
+                                <input type="checkbox" class="filter-checkbox form-check-input  p-3" value="shorts">
+                                <label class="fw-medium"> Shorts</label>
+                            </div>
+                            <div class="col-4 d-flex align-items-center gap-2">
+                                <input type="checkbox" class="filter-checkbox form-check-input  p-3" value="skirt">
+                                <label class="fw-medium"> Skirts</label>
+                            </div>
+                            <div class="col-4 d-flex align-items-center gap-2">
+                                <input type="checkbox" class="filter-checkbox form-check-input  p-3" value="trousers">
+                                <label class="fw-medium"> Trousers</label>
+                            </div>
+                            <div class="col-4 d-flex align-items-center gap-2">
+                                <input type="checkbox" class="filter-checkbox form-check-input  p-3" value="dress">
+                                <label class="fw-medium"> Dresses</label>
+                            </div>
+                        </div>
+                        <div class="mt-5 d-flex justify-content-center">
+                            <button class="btn btn-dark  w-100 " id="resetFilters">Reset</button>
+                        </div>
+                    </div>
+                </div>
+
+
+
+            </div>
+        </div>
+    </section>
+
+
+    <section>
+        <div class="offcanvas cart offcanvas-end" tabindex="-1" id="shoppingCart"
+            aria-labelledby="offcanvasExampleLabel">
+            <div class="offcanvas-header">
+                <a class="navbar-brand fw-medium myfont fs-2" href="#">Luxe<span class="text-info">Fit</span>.</a>
+                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body d-flex flex-column">
+                <div class="d-flex gap-2 align-items-center">
+                    <h5>Shopping Cart</h5>
+                    <span class="cart-count d-flex align-items-center badge rounded-pill bg-danger" id="cartMiniCoun">
+                        0
+                    </span>
+                </div>
+                <ul id="cartItems" class="list-groups"></ul>
+                <div class="mt-auto " id="cartFooter">
+                    <div class="d-flex justify-content-between align-items-center fw-bolder">
+                        <span class="mt-2">Total:</span>
+                        <span class="text-success fs-4 me-3" id="cartTotal"></span>
+                    </div>
+                    <button class="btn btn-info text-white fw-medium w-100 mt-2" id="checkOut">Checkout</button>
+                    <button class="btn btn-secondary  fw-medium w-100 mt-3" id="clearCart">Clear cart</button>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <div id="footer"></div>
+
+    <script src="./products.js"></script>
+    <script src="./script.js"></script>
+    <script src="./shop.js"></script>
+
+
+    <script>
+        // loadComponent("header", "header.html")
+        loadComponent("footer", "footer.html");
+    </script>
+</body>
+
+
+
+</html>

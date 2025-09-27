@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bungee&family=Karla:ital,wght@0,200..800;1,200..800&family=Lora:ital,wght@0,400..700;1,400..700&family=Plaster&family=Quattrocento:wght@400;700&family=Roboto+Slab:wght@100..900&family=Rubik+Storm&display=swap"
+        rel="stylesheet">
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <link rel="icon" href="./images/favicon.png">
+    <title>LuxeFit</title>
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg bg-body-tertiary px-3 fixed-top bg-white shadow-sm ">
+        <div class="container-fluid">
+            <a class="navbar-brand fw-medium myfont fs-2" href="#">Luxe<span class="text-info">Fit</span>.</a>
+
+            <button style="width: 40px; height: 40px; border-radius: 50px"
+                class="btn bg-info text-info text-center bg-opacity-25 p-1 d-lg-none ms-md-5 position-relative "
+                type="button" data-bs-toggle="offcanvas" data-bs-target="#shoppingCart"
+                aria-controls="offcanvasExample">
+                <i class="bi bi-cart2 fs-5"></i>
+                <span class="cart-count position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger"
+                    id="cartMiniCount">
+                    0
+                </span>
+            </button>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active fw-medium" aria-current="page" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link fw-medium" href="shop.html">Shop</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link fw-medium" href="about.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link fw-medium" href="contact.html">Contact</a>
+                    </li>
+                </ul>
+
+            </div>
+            <button style="width: 40px; height: 40px; border-radius: 50px"
+                class="btn bg-info text-info text-center bg-opacity-25 p-1 d-none d-lg-block ms-2 position-relative"
+                type="button" data-bs-toggle="offcanvas" data-bs-target="#shoppingCart"
+                aria-controls="offcanvasExample">
+                <i class="bi bi-cart2 fs-5 icon-bold"></i>
+                <span class="cart-count position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger"
+                    id="cartMiniCount"></span>
+            </button>
+        </div>
+    </nav>
+    <div id="header"></div>
+    <section class="mt-5">
+        <div class="container-fluid px-5 d-flex justify-content-center flex-column " style="background-image: url(./images/hero1.png);
+    background-repeat: no-repeat;background-position: top 25% right 35% ; background-size: cover; height: 100dvh; ">
+            <div class="ms-md-5">
+                <p class="fs-4 fw-medium">Trade-in-offer</p>
+                <h3 class=" display-3 fw-bold">Super value deals</h3>
+                <h1 class="text-info fw-bold display-3">On all products</span></h1>
+                <p class="text-secondary fw-medium">Save more with coupons & up to 70% off!</p>
+                <button
+                    style="background-image: url(./images/button.png); background-repeat: no-repeat; padding: 10px 80px 25px 65px;"
+                    class="btn fs-5 text-dark fw-bold "><a href="./shop.html" class="nav-link">Shop Now</a></button>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="container-fluid px-3 py-5">
+            <div class="row g-4">
+                <div class="col-6 col-md-4 col-lg-2">
+                    <div class="card m-auto">
+                        <img src="./images/features/f1.png" class="card-img-top" alt="">
+                        <div class="card-body">
+                            <p
+                                class="card-text text-center fw-medium text-primary bg-primary bg-opacity-25 rounded-1 py-2">
+                                Online Order</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 col-md-4 col-lg-2">
+                    <div class="card">
+                        <img src="./images/features/f2.png" class="card-img-top" alt="">
+                        <div class="card-body">
+                            <p
+                                class="card-text text-center fw-medium text-danger bg-danger bg-opacity-25 rounded-1 py-2">
+                                Free Shipping</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 col-md-4 col-lg-2">
+                    <div class="card">
+                        <img src="./images/features/f3.png" class="card-img-top" alt="">
+                        <div class="card-body">
+                            <p
+                                class="card-text text-center fw-medium text-success bg-success bg-opacity-25 rounded-1 py-2">
+                                Save Money</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 col-md-4 col-lg-2">
+                    <div class="card">
+                        <img src="./images/features/f4.png" class="card-img-top" alt="">
+                        <div class="card-body">
+                            <p
+                                class="card-text text-center fw-medium text-primary bg-primary bg-opacity-25 rounded-1 py-2">
+                                Promotions</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 col-md-4 col-lg-2">
+                    <div class="card">
+                        <img src="./images/features/f5.png" class="card-img-top" alt="">
+                        <div class="card-body">
+                            <p class="card-text text-center fw-medium text-info bg-info bg-opacity-25 rounded-1 py-2">
+                                Happy
+                                Sell</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 col-md-4 col-lg-2">
+                    <div class="card">
+                        <img src="./images/features/f6.png" class="card-img-top" alt="">
+                        <div class="card-body">
+                            <p
+                                class="card-text text-center fw-medium text-warning bg-warning bg-opacity-25 rounded-1 py-2">
+                                24/7 Support</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section>
+        <div class="container-fluid mt-5 py-4">
+            <div class="text-center">
+                <h1 class="fw-bold fs-1">Featured <span class="text-info">Products</span></h1>
+                <p class="text-secondary fw-medium">Summer Collection New Modern Design</p>
+            </div>
+            <div class="row px-3 g-3 " id="productContainer"></div>
+        </div>
+    </section>
+
+
+    <section>
+        <div class="container-fluid py-5 text-center mt-5"
+            style="background-image: url(./images/banner/b2.jpg); background-repeat: no-repeat;background-position: center ; background-size: cover; height: 45vh;">
+            <div class="mt-5">
+                <p class="text-white fw-bold fs-5">Repair Services</p>
+                <h3 class="text-white fw-bold">Up to <span class="text-danger">70% Off </span> - All t-Shirts &
+                    Accessories
+                </h3>
+                <button class="btn btn-light fw-medium py-2 px-4 mt-3">Explore More</button>
+            </div>
+        </div>
+    </section>
+
+
+    <section>
+        <div class="container-fluid mt-5 py-4">
+            <div class="text-center">
+                <h1 class="fw-bold ">New <span class="text-info">Arrivals</span></h1>
+                <p class="fw-medium text-secondary">Summer Collection New Modern Design</p>
+            </div>
+            <div class="row g-3 px-3" id="newArrivals"></div>
+        </div>
+    </section>
+
+
+    <section>
+        <div class="container-fluid py-5">
+            <div class="row g-4 px-3">
+                <div class="col-12 col-md-6">
+                    <div class="card border-0 text-start position-relative">
+                        <img class="card-img-top" src="./images/banner//b17.jpg"
+                            style=" object-fit: cover; height: 20rem;">
+                        <div class="card-body position-absolute mt-md-5">
+                            <div class="p-4 text-white mt-5 mt-md-0">
+                                <span class="fw-medium fs-5">crazy deals</span>
+                                <h3 class="fs-1">buy 1 get 1 free</h3>
+                                <p class="fw-medium">The best classic dress is on sale</p>
+                                <button class="btn btn-outline-dark fw-medium">Learn More</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6">
+                    <div class="card border-0 text-start position-relative">
+                        <img class="card-img-top "
+                            src="https://t4.ftcdn.net/jpg/08/87/41/89/240_F_887418907_BmrsUxZ7FCnmSjJGEyuz6X3oH4YsalaF.jpg"
+                            style=" object-fit:cover; height: 20rem;">
+                        <div class="card-body position-absolute mt-md-5">
+                            <div class="p-4 text-white mt-5 mt-md-0">
+                                <span class="fw-medium fs-5">spring/summer</span>
+                                <h3 class="fs-1">upcoming deals</h3>
+                                <p class="fw-medium">The best classic dress is on sale</p>
+                                <button class="btn btn-outline-light fw-medium">Collection</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row g-3 mt-5">
+                <div class="col-12 col-md-4">
+                    <div class="card border-0 text-start position-relative">
+                        <img class="card-img-top "
+                            src="https://t3.ftcdn.net/jpg/02/71/77/56/240_F_271775672_yo8ZgraN2IHGbfqP2k0PsLjwvmatUNUJ.jpg"
+                            style=" object-fit:cover; height: 15rem;">
+                        <div class="position-absolute top-0 start-0 w-100 h-100 bg-dark opacity-25"></div>
+                        <div class="card-body position-absolute mt-3">
+                            <div class="p-4 text-white mt-5 text-center">
+                                <h3 class="fw-bolder">SEASONAL SALE</h3>
+                                <p class="fw-bold text-danger fs-5">Winter collection -50% off</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-4">
+                    <div class="card border-0 text-start position-relative">
+                        <img class="card-img-top bg-dark"
+                            src="https://t4.ftcdn.net/jpg/00/82/76/67/240_F_82766721_HciDo5t1KUnYh0fjJDmF0KQ6nxjKulp2.jpg"
+                            style=" object-fit:cover; height: 15rem;">
+                        <div class="position-absolute top-0 start-0 w-100 h-100 bg-dark opacity-25"></div>
+
+                        <div class="card-body position-absolute mt-3">
+                            <div class="p-4 mt-4 text-center">
+                                <h3 class="fw-bolder text-white">NEW FOOTWEAR COLLECTION</h3>
+                                <p class="fw-bold fs-5 text-danger">Winter collection -50% off</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-4">
+                    <div class="card border-0 text-start position-relative">
+                        <img class="card-img-top bg-dark"
+                            src="https://t3.ftcdn.net/jpg/15/77/46/14/240_F_1577461458_xHwupfNo2oQ3paYAeXgizTxn9xRvshij.jpg"
+                            style=" object-fit:cover; height: 15rem;">
+                        <div class="position-absolute top-0 start-0 w-100 h-100 bg-dark opacity-25"></div>
+                        <div class="card-body position-absolute text-center  ms-5 mt-3">
+                            <div class="p-4 mt-4">
+                                <h3 class="fw-bolder text-white">T-shirts</h3>
+                                <p class="fw-bold fs-5 text-danger">New Trendy Prints</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="offcanvas cart offcanvas-end" tabindex="-1" id="shoppingCart" aria-labelledby="offcanvasExampleLabel">
+        <div class="offcanvas-header">
+            <a class="navbar-brand fw-medium myfont fs-2" href="#">Luxe<span class="text-info">Fit</span>.</a>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body d-flex flex-column">
+            <div class="d-flex gap-2 align-items-center">
+                <h5>Shopping Cart</h5>
+                <span class="cart-count d-flex align-items-center badge rounded-pill bg-danger" id="cartMiniCoun">
+                    0
+                </span>
+            </div>
+            <ul id="cartItems" class="list-groups"></ul>
+            <div class="mt-auto " id="cartFooter">
+                <div class="d-flex justify-content-between align-items-center fw-bolder">
+                    <span class="mt-2">Total:</span>
+                    <span class="text-success fs-4 me-3" id="cartTotal"></span>
+                </div>
+                <button class="btn btn-info text-white fw-medium w-100 mt-2" id="checkOut">Checkout</button>
+                <button class="btn btn-secondary  fw-medium w-100 mt-3" id="clearCart">Clear cart</button>
+            </div>
+
+        </div>
+    </div>
+
+    <div id="footer"></div>
+
+    <script src="./products.js"></script>
+    <script src="./script.js"></script>
+    <script src="./shop.js"></script>
+    <script>
+        loadComponent("footer", "footer.html");
+    </script>
+    
+</body>
+
+</html>
